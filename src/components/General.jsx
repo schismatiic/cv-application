@@ -21,6 +21,7 @@ function General() {
               id="general-name"
               type="text"
               placeholder="John Doe"
+              value={fullName !== "" ? fullName : ""}
               required
             />
           </div>
@@ -31,6 +32,7 @@ function General() {
               id="general-email"
               type="email"
               placeholder="example@example.com"
+              value={email !== "" ? email : ""}
               required
             />
           </div>
@@ -41,6 +43,7 @@ function General() {
               id="general-phone"
               type="tel"
               placeholder="+1 (555) 555-5555"
+              value={phone !== "" ? phone : ""}
               required
             />
           </div>{" "}

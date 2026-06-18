@@ -10,8 +10,8 @@
 .general-field {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   margin-bottom: 10px;
 }
 .general h3 {
@@ -29,6 +29,7 @@
   background-color: var(--input-bg);
   border: 1px solid var(--border);
   border-radius: 4px;
+  width: 250px;
 }
 .general button {
   font-size: 14px;
