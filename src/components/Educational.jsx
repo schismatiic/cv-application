@@ -21,7 +21,7 @@ function Educational() {
               id="educational-name"
               type="text"
               placeholder="University of Oxford"
-              value={schoolName !== "" ? schoolName : ""}
+              value={schoolName}
               required
             />
           </div>
@@ -32,7 +32,7 @@ function Educational() {
               id="educational-title"
               type="text"
               placeholder="Computer Science"
-              value={title !== "" ? title : ""}
+              value={title}
               required
             />
           </div>
@@ -43,7 +43,7 @@ function Educational() {
               id="educational-date"
               type="text"
               placeholder="2020-2025"
-              value={date !== "" ? date : ""}
+              value={date}
               required
             />
           </div>{" "}

@@ -1,4 +1,4 @@
-.general {
+.practical {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--border);
@@ -7,23 +7,23 @@
   margin-top: 20px;
   max-width: 480px;
 }
-.general-field {
+.practical-field {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
-.general h3 {
+.practical h3 {
   font-size: 14px;
   color: var(--text-h);
   margin-bottom: 10px;
 }
-.general label {
+.practical label {
   font-weight: 700;
   font-size: 16px;
   color: var(--text);
 }
-.general input {
+.practical input {
   font-size: 14px;
   padding: 4px 6px;
   background-color: var(--input-bg);
@@ -31,7 +31,16 @@
   border-radius: 4px;
   width: 250px;
 }
-.general button {
+.practical textarea {
+  font-size: 14px;
+  padding: 4px 6px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  width: 250px;
+  resize: vertical;
+}
+.practical button {
   font-size: 14px;
   align-self: end;
   background-color: var(--accent-bg);
@@ -40,30 +49,30 @@
   padding: 4px 10px;
   margin-top: 20px;
 }
-.general button:hover {
+.practical button:hover {
   transform: scale(0.95);
   background-color: var(--accent-bg-hover);
 }
-.general button:active {
+.practical button:active {
   transform: scale(0.85);
 }
-.general h4 {
+.practical h4 {
   font-size: 34px;
 }
-.general p {
+.practical p {
   font-size: 14px;
   color: var(--text-h);
 }
 @media (max-width: 480px) {
-  .general-field {
+  .practical-field {
     flex-direction: column;
     justify-content: center;
     align-items: start;
   }
-  .general input {
+  .practical input {
     width: 100%;
   }
-  .general button {
+  .practical button {
     align-self: start;
   }
 }
