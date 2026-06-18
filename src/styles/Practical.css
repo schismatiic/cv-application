@@ -72,6 +72,9 @@
   .practical input {
     width: 100%;
   }
+  .practical textarea {
+    width: 100%;
+  }
   .practical button {
     align-self: start;
   }
