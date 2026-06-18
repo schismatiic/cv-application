@@ -1,4 +1,4 @@
-.general {
+.educational {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--border);
@@ -7,24 +7,24 @@
   margin-top: 20px;
   max-width: 480px;
 }
-.general-field {
+.educational-field {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 10px;
 }
-.general h3 {
+.educational h3 {
   font-size: 14px;
   color: var(--text-h);
   margin-bottom: 10px;
 }
-.general label {
+.educational label {
   font-weight: 700;
   font-size: 16px;
   color: var(--text);
 }
-.general input {
+.educational input {
   font-size: 14px;
   padding: 4px 6px;
   background-color: var(--input-bg);
@@ -32,7 +32,7 @@
   border-radius: 4px;
   width: 250px;
 }
-.general button {
+.educational button {
   font-size: 14px;
   align-self: end;
   background-color: var(--accent-bg);
@@ -41,30 +41,30 @@
   padding: 4px 10px;
   margin-top: 20px;
 }
-.general button:hover {
+.educational button:hover {
   transform: scale(0.95);
   background-color: var(--accent-bg-hover);
 }
-.general button:active {
+.educational button:active {
   transform: scale(0.85);
 }
-.general h4 {
+.educational h4 {
   font-size: 34px;
 }
-.general p {
+.educational p {
   font-size: 14px;
   color: var(--text-h);
 }
 @media (max-width: 480px) {
-  .general-field {
+  .educational-field {
     flex-direction: column;
     justify-content: center;
     align-items: start;
   }
-  .general input {
+  .educational input {
     width: 100%;
   }
-  .general button {
+  .educational button {
     align-self: start;
   }
 }
