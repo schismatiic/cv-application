@@ -35,7 +35,7 @@ function General() {
             />
           </div>
           <div className="general-field">
-            <label htmlFor="general-phone">Phone number: </label>
+            <label htmlFor="general-phone">Phone: </label>
             <input
               onChange={(e) => setPhone(e.target.value)}
               id="general-phone"
