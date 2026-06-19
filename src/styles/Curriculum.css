@@ -14,6 +14,20 @@
     border-radius: 20px;
     padding: 20px 30px;
     margin-top: 20px;
-    max-width: 480px;
+    max-width: 640px;
   }
+}
+#general h3 {
+  font-size: 34px;
+}
+p {
+  font-size: 14px;
+  color: var(--text-h);
+}
+.curriculum section {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.curriculum section:last-child {
+  border-bottom: none;
 }
