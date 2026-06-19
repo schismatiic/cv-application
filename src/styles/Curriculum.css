@@ -6,3 +6,14 @@
   padding: 20px 30px;
   margin-top: 20px;
 }
+@media (max-width: 640px) {
+  .curriculum {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 20px 30px;
+    margin-top: 20px;
+    max-width: 480px;
+  }
+}

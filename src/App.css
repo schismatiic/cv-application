@@ -8,9 +8,12 @@ body {
   width: 100%;
   margin-left: 20px;
 }
-@media (max-width: 960px) {
+@media (max-width: 640px) {
   #content {
     flex-wrap: wrap;
+  }
+  #left-content {
+    width: 100%;
   }
   #right-content {
     margin-left: 0;
