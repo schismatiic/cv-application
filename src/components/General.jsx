@@ -1,11 +1,17 @@
 import { useState } from "react";
 import "../styles/General.css";
 
-function General() {
+function General({ generalInformation, setGeneralInformation }) {
   const [boolMode, setBoolMode] = useState(true);
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const handleFullName = (e) => {
+    setGeneralInformation({ ...generalInformation, fullName: e.target.value });
+  };
+  const handleEmail = (e) => {
+    setGeneralInformation({ ...generalInformation, email: e.target.value });
+  };
+  const handlePhone = (e) => {
+    setGeneralInformation({ ...generalInformation, phone: e.target.value });
+  };
   const handleMode = () => setBoolMode((prev) => !prev);
 
   return (
@@ -13,46 +19,45 @@ function General() {
       <h3>General information</h3>
       {boolMode ? (
         <>
-          {" "}
           <div className="general-field">
             <label htmlFor="general-name">Full name: </label>
             <input
-              onChange={(e) => setFullName(e.target.value)}
+              onChange={handleFullName}
               id="general-name"
               type="text"
               placeholder="John Doe"
-              value={fullName}
+              value={generalInformation.fullName}
               required
             />
           </div>
           <div className="general-field">
             <label htmlFor="general-email">Email: </label>
             <input
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleEmail}
               id="general-email"
               type="email"
               placeholder="example@example.com"
-              value={email}
+              value={generalInformation.email}
               required
             />
           </div>
           <div className="general-field">
             <label htmlFor="general-phone">Phone: </label>
             <input
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={handlePhone}
               id="general-phone"
               type="tel"
               placeholder="+1 (555) 555-5555"
-              value={phone}
+              value={generalInformation.phone}
               required
             />
           </div>{" "}
         </>
       ) : (
         <>
-          <h4>{fullName}</h4>
-          <p>{email}</p>
-          <p>{phone}</p>
+          <h4>{generalInformation.fullName}</h4>
+          <p>{generalInformation.email}</p>
+          <p>{generalInformation.phone}</p>
         </>
       )}
       <button onClick={handleMode}>{boolMode ? "Submit" : "Edit"}</button>

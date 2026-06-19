@@ -1,13 +1,38 @@
 import { useState } from "react";
 import "../styles/Practical.css";
 
-function Practical() {
+function Practical({ practicalInformation, setPracticalInformation }) {
   const [boolMode, setBoolMode] = useState(true);
-  const [companyName, setCompanyName] = useState("");
-  const [position, setPosition] = useState("");
-  const [responsabilities, setResponsabilities] = useState("");
-  const [dateFrom, setDateFrom] = useState("");
-  const [dateUntil, setDateUntil] = useState("");
+  const handleCompanyName = (e) => {
+    setPracticalInformation({
+      ...practicalInformation,
+      companyName: e.target.value,
+    });
+  };
+  const handlePosition = (e) => {
+    setPracticalInformation({
+      ...practicalInformation,
+      position: e.target.value,
+    });
+  };
+  const handleResponsabilities = (e) => {
+    setPracticalInformation({
+      ...practicalInformation,
+      responsabilities: e.target.value,
+    });
+  };
+  const handleDateFrom = (e) => {
+    setPracticalInformation({
+      ...practicalInformation,
+      dateFrom: e.target.value,
+    });
+  };
+  const handleDateUntil = (e) => {
+    setPracticalInformation({
+      ...practicalInformation,
+      dateUntil: e.target.value,
+    });
+  };
   const handleMode = () => setBoolMode((prev) => !prev);
 
   return (
@@ -19,68 +44,68 @@ function Practical() {
           <div className="practical-field">
             <label htmlFor="practical-name">Company name: </label>
             <input
-              onChange={(e) => setCompanyName(e.target.value)}
+              onChange={handleCompanyName}
               id="practical-name"
               type="text"
               placeholder="Red Hat"
-              value={companyName}
+              value={practicalInformation.companyName}
               required
             />
           </div>
           <div className="practical-field">
             <label htmlFor="practical-position">Position title: </label>
             <input
-              onChange={(e) => setPosition(e.target.value)}
+              onChange={handlePosition}
               id="practical-position"
               type="text"
               placeholder="Backend Developer"
-              value={position}
+              value={practicalInformation.position}
               required
             />
           </div>
           <div className="practical-field">
             <label htmlFor="practical-responsabilities">
-              Responsibilities:{" "}
+              Responsibilities:
             </label>
             <textarea
-              onChange={(e) => setResponsabilities(e.target.value)}
+              onChange={handleResponsabilities}
               id="practical-responsabilities"
               type="text"
               placeholder="Developed and maintained REST APIs."
-              value={responsabilities}
+              value={practicalInformation.responsabilities}
               required
             />
           </div>{" "}
           <div className="practical-field">
             <label htmlFor="practical-from">Date from: </label>
             <input
-              onChange={(e) => setDateFrom(e.target.value)}
+              onChange={handleDateFrom}
               id="practical-from"
               type="text"
               placeholder="2025"
-              value={dateFrom}
+              value={practicalInformation.dateFrom}
               required
             />
           </div>
           <div className="practical-field">
             <label htmlFor="practical-until">Until: </label>
             <input
-              onChange={(e) => setDateUntil(e.target.value)}
+              onChange={handleDateUntil}
               id="practical-until"
               type="text"
               placeholder="Present"
-              value={dateUntil}
+              value={practicalInformation.dateUntil}
               required
             />
           </div>
         </>
       ) : (
         <>
-          <h4>{companyName}</h4>
-          <p>{position}</p>
-          <p>{responsabilities}</p>
+          <h4>{practicalInformation.companyName}</h4>
+          <p>{practicalInformation.position}</p>
+          <p>{practicalInformation.responsabilities}</p>
           <p>
-            {dateFrom} - {dateUntil}
+            {practicalInformation.dateFrom} - {practicalInformation.dateUntil}
           </p>
         </>
       )}
